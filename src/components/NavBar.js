@@ -7,7 +7,6 @@ function NavBar() {
   const history = useHistory();
   const {isauth, signout} = useContext(AuthContext);
 
-
   return (
     <nav>
         <Link to="/">
