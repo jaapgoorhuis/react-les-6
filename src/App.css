@@ -18,6 +18,10 @@ button + button {
   margin-left: 8px;
 }
 
+h1.message {
+  background: #faeab3;
+}
+
 button:hover {
   cursor: pointer;
 }
