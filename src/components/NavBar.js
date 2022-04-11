@@ -6,7 +6,6 @@ import {AuthContext} from "../context/AuthContext";
 function NavBar() {
   const history = useHistory();
   const {isauth, signout} = useContext(AuthContext);
-  console.log(isauth);
 
 
   return (

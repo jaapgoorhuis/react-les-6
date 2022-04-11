@@ -1,11 +1,11 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import {AuthContext} from "../context/AuthContext";
+import axios from "axios";
+import jwt_decode from "jwt-decode";
 
 function Profile() {
-
-    const {isauth} = useContext(AuthContext);
-
+    const {isauth, user} = useContext(AuthContext);
   return (
 <>
     {isauth ?
@@ -13,8 +13,8 @@ function Profile() {
             <h1>Profielpagina</h1>
                 <section>
                     <h2>Gegevens</h2>
-                    <p><strong>Gebruikersnaam:</strong> hardcoded-test</p>
-                    <p><strong>Email:</strong> hardcoded@test.com</p>
+                    <p><strong>Gebruikersnaam:</strong> {user.username} </p>
+                    <p><strong>Email:</strong> {user.email} </p>
                 </section>
                 <section>
                     <h2>Strikt geheime profiel-content</h2>
